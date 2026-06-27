@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: #030712;
+    color: #f1f5f9;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(75, 85, 99, 0.2);
+  }
+  
+  .glass-card {
+    @apply glass rounded-2xl p-5 transition-all duration-300;
+  }
+  .glass-card:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.1);
+  }
+
+  .btn-primary {
+    @apply px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 
+           text-white font-medium text-sm
+           hover:from-indigo-500 hover:to-purple-500 
+           active:scale-95 transition-all duration-200
+           shadow-lg shadow-indigo-500/25;
+  }
+  
+  .btn-secondary {
+    @apply px-5 py-2.5 rounded-xl bg-gray-800 text-gray-300 font-medium text-sm
+           border border-gray-700 hover:bg-gray-700 hover:border-gray-600
+           active:scale-95 transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 rounded-xl text-gray-400 hover:text-white hover:bg-gray-800
+           transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-xl bg-gray-800/50 border border-gray-700 
+           text-gray-200 placeholder-gray-500 text-sm
+           focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50
+           transition-all duration-200;
+  }
+
+  .tag {
+    @apply px-2.5 py-1 rounded-lg text-xs font-medium;
+  }
+
+  .xp-badge {
+    @apply inline-flex items-center gap-1 px-2 py-1 rounded-full 
+           bg-amber-500/10 text-amber-400 text-xs font-bold
+           border border-amber-500/20;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent;
+  }
+  
+  .drag-region {
+    -webkit-app-region: drag;
+  }
+  .no-drag {
+    -webkit-app-region: no-drag;
+  }
+}

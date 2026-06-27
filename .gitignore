@@ -1,0 +1,14 @@
+﻿node_modules/
+dist/
+dist-electron/
+dist-ios-pwa/
+release/
+.npm-cache/
+*.log
+errors.txt
+tsc_errors.txt
+*.bak_*
+.DS_Store
+Thumbs.db
+.env
+.env.*
