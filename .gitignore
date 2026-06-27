@@ -5,6 +5,7 @@ dist-ios-pwa/
 release/
 .npm-cache/
 *.log
+HANDOFF_LOG.md
 errors.txt
 tsc_errors.txt
 *.bak_*
