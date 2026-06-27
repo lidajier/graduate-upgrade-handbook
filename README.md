@@ -47,6 +47,12 @@ npm run ios:pwa:preview
 
 把 `dist-ios-pwa/` 部署到 GitHub Pages、Vercel、Netlify 或自己的 HTTPS 服务。iPhone/iPad 使用 Safari 打开网址后，选择“添加到主屏幕”，即可像 App 一样启动。
 
+当前 GitHub Pages 预期地址：
+
+```text
+https://lidajier.github.io/graduate-upgrade-handbook/
+```
+
 注意：Electron 不能直接打包成 iOS App。若要生成 `.ipa` 并上架 TestFlight/App Store，需要 macOS + Xcode + Apple Developer 签名，并把 Web 构建接入 Capacitor 或重写为 React Native。
 
 PWA 数据仅保存在当前设备的浏览器本地存储中，换设备、清缓存或卸载主屏幕应用可能导致数据丢失。正式推广前建议升级到 IndexedDB，并增加导入/导出备份。
